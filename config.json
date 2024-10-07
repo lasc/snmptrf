@@ -1,0 +1,64 @@
+{
+  "target": "0.0.0.0",
+  "port": 162,
+  "users": [
+    {
+      "username": "user1",
+      "auth_protocol": "SHA",
+      "auth_passphrase": "authpass1",
+      "privacy_protocol": "AES",
+      "privacy_passphrase": "privpass1"
+    },
+    {
+      "username": "user2",
+      "auth_protocol": "SHA",
+      "auth_passphrase": "authpass2",
+      "privacy_protocol": "AES",
+      "privacy_passphrase": "privpass2"
+    },
+    {
+      "username": "us3r3",
+      "auth_protocol": "SHA",
+      "auth_passphrase": "authpass3",
+      "privacy_protocol": "AES",
+      "privacy_passphrase": "privpass3"
+    },
+    {
+      "username": "user4",
+      "auth_protocol": "SHA",
+      "auth_passphrase": "authpass34",
+      "privacy_protocol": "AES",
+      "privacy_passphrase": "privpass34"
+    },
+    {
+      "username": "user555",
+      "auth_protocol": "SHA",
+      "auth_passphrase": "authpass34",
+      "privacy_protocol": "AES",
+      "privacy_passphrase": "privpass34"
+    }
+  ],
+  "community_strings": ["public", "private"],
+  "output": {
+    "log_file": "snmp_traps.log",
+    "auth_failure_log": "auth_failures.log"
+  },
+  "kafka": {
+    "enabled": false,
+    "brokers": ["localhost:9092"],
+    "topic": "snmp_traps"
+  },
+  "rabbitmq": {
+    "enabled": false,
+    "url": "amqp://guest:guest@localhost:5672/",
+    "exchange": "snmp_traps",
+    "routing_key": "trap"
+  },
+  "forward_target": {
+    "enabled": true,
+    "address": "192.168.1.100",
+    "port": 162,
+    "community": "public"
+  },
+  "mib_dirs": ["/usr/share/snmp/mibs", "/usr/local/share/snmp/mibs"]
+}
