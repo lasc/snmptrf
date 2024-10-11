@@ -1,3 +1,6 @@
+***from the author: sorry this project has been done over the weekend as a debug tool for traps and has not been finished. My employer is paying for further modifications that won't be published. The receiving part is working fine, and the forwarding feature. Kafka etc need more work. Feel free do to PRs***
+
+
 # SNMP Trap Receiver
 
 This project implements an SNMP trap receiver that supports SNMPv2c and SNMPv3 traps and informs. It can handle different authentication methods and push notifications to various destinations such as v2 traps, Kafka, and RabbitMQ.
