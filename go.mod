@@ -1,6 +1,6 @@
 module snmp-trap-receiver
 
-go 1.22.4
+go 1.22
 
 require (
 	github.com/gosnmp/gosnmp v1.38.0
